@@ -2,14 +2,24 @@
 # Simple Interest Calculator
 # This script calculates simple interest based on user input
 # Formula: SI = (P * R * T) / 100
-# Where P = Principal, R = Rate of Interest, T = Time Period
+# Where:
+#   P = Principal (Initial Amount)
+#   R = Rate of Interest (Percentage per annum)
+#   T = Time Period (in years)
+# 
+# Input Fields Required:
+# 1. Principal Amount
+# 2. Rate of Interest
+# 3. Time Period
+#
+# The script prompts the user for these inputs and computes the simple interest
 
 echo "======================================"
 echo "   Simple Interest Calculator"
 echo "======================================"
 echo ""
 
-# Get Principal Amount
+# INPUT FIELD 1: Get Principal Amount
 echo -n "Enter the principal amount: "
 read principal
 
@@ -19,7 +29,7 @@ if ! [[ "$principal" =~ ^[0-9]+\.?[0-9]*$ ]]; then
     exit 1
 fi
 
-# Get Rate of Interest
+# INPUT FIELD 2: Get Rate of Interest
 echo -n "Enter the rate of interest (% per annum): "
 read rate
 
@@ -29,7 +39,7 @@ if ! [[ "$rate" =~ ^[0-9]+\.?[0-9]*$ ]]; then
     exit 1
 fi
 
-# Get Time Period
+# INPUT FIELD 3: Get Time Period
 echo -n "Enter the time period (in years): "
 read time
 
